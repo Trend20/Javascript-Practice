@@ -37,3 +37,39 @@ function plusMinus(arr){
   console.log((negativeRatio / arrLength).toFixed(6));
   console.log((zeroRatio / arrLength).toFixed(6));
 }
+
+// check if a string is a palindrome
+
+// FIRST SOLUTION
+function checkPalindrome(str){
+  // string length
+  let len = str.length;
+
+  for(let i = 0; i < len / 2; i++){
+    if(str[i] !== str[len - 1 - i]){
+      return false;
+    }else{
+      return true;
+    }
+  }
+}
+
+// SECOND SOLUTION
+function checkPalindrome(str){
+  // change string to array
+  let strArray = str.split('');
+  // reverse the array
+  let reversedArray = strArray.reverse();
+
+  // join the reversed array
+  let joinedArray = strArray.join('');
+
+  // compare the string
+  if(str == reversedArray){
+    console.log('It is a palindrome');
+    // return true;
+  }else{
+    console.log('It is not a palindrome');
+    // return false;
+  }
+}
