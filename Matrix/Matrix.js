@@ -65,7 +65,7 @@ function checkPalindrome(str){
   let joinedArray = strArray.join('');
 
   // compare the string
-  if(str == reversedArray){
+  if(str == joinedArray){
     console.log('It is a palindrome');
     // return true;
   }else{
