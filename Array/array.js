@@ -55,3 +55,41 @@ for(let i =0; i<greetingArray.length; i++){
 }
 
 performArrayOperations();
+
+
+// ARRAY OPERATIONS AND THEIR BIG-Os
+// insertion: uses the .push to add an item to the end of an array[O(1)]
+// deletion: uses the .pop to remove an item from the end of an array[O(1)]
+// access: uses the index of an item to get an array item[O(1)]
+//iteration: this is the process of accessing each individual item of a data structure. All the operations has a time complexity of O(n);
+
+let iterativeArr = [4, 3, 5, 7, 8, 9, 0];
+function getArrItems(arr){
+  for(let i =0; i<arr.length; i++){
+    // console.log(arr[i]);
+  }
+}
+getArrItems(iterativeArr);
+
+// USING WHILE LOOP
+
+let iterativeArray = [5, 8, 5, 6, 8, 9, 0];
+function getArrItems(arr){
+  let i =0;
+  while(i<arr.length){
+    console.log(arr[i])
+    i++
+  }
+}
+getArrItems(iterativeArray);
+
+
+// FOR-IN LOOPS
+let forInArr = ['Net', 'Mitchel','Website', 'Mobile', 'Blockchain'];
+const findItems = (arr) =>{
+  for(let item in arr){
+    console.log(arr[item]);
+  }
+}
+findItems(forInArr);
+
