@@ -93,3 +93,8 @@ const findItems = (arr) =>{
 }
 findItems(forInArr);
 
+// FOR OF LOOP
+for(let item of arr){
+  console.log(item)
+}
+
