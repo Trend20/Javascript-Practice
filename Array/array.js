@@ -94,7 +94,65 @@ const findItems = (arr) =>{
 findItems(forInArr);
 
 // FOR OF LOOP
-for(let item of arr){
+let forOfArr = ['Net', 'Mitchel','Website', 'Mobile', 'Blockchain'];
+for(let item of forOfArr){
   console.log(item)
 }
+
+// FOR-EACH
+let forEachArr = ['Net', 'Mitchel','Website', 'Mobile', 'Blockchain'];
+ forEachArr.forEach((item, index) =>{
+   console.log(item);
+ });
+
+//  HELPER FUNCTIONS
+
+// slice
+
+let testArray = [30, 50, 7, 9, 20, 10, 45, 60];
+
+let slicedArray = testArray.slice(3, 6);
+console.log(slicedArray);
+
+/*
+  the .slice() does not include the element of the last index when used
+ */
+
+  /* 
+   Given an array of numbers, return an array of numbers that add upto 9
+   */
+  let addArray = [1,2,3,4,5];
+
+ const findNumPairs = (num, sum) =>{
+
+  for(let i = 0; i<num.length; i++){
+    for(let j = 1; j<num.length; j++){
+      if(num[i] + num[j] == sum){
+        return [i, j];
+      }
+    }
+  }
+  return -1;
+ }
+ findNumPairs(addArray, 7);
+//  [3, 4] O(n^2);
+
+// optimized solution
+const findPairs = (num, weight) =>{
+  let numContainer = {};
+  for(let i =0; i < num.length; i++){
+    let currentIndex = num[i];
+    
+    numDifference = weight - currentIndex;
+    if(numContainer[currentIndex] != undefined){
+       
+    }
+
+  }
+}
+
+
+
+
+
 
