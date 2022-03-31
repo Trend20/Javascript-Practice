@@ -137,18 +137,23 @@ console.log(slicedArray);
  findNumPairs(addArray, 7);
 //  [3, 4] O(n^2);
 
+
+
 // optimized solution
-const findPairs = (num, weight) =>{
-  let numContainer = {};
-  for(let i =0; i < num.length; i++){
-    let currentIndex = num[i];
-    
-    numDifference = weight - currentIndex;
-    if(numContainer[currentIndex] != undefined){
-       
+const findPairs = (arr, weight) =>{
+  let hashTable = {};
+  for(let i =0; i < arr.length; i++){
+    let currentElement = arr[i];
+
+    arrDifference = weight - currentElement;
+    if(hashTable[currentElement] != undefined){
+       return [i, hashTable[arrDifference]]
+    }else{
+      hashTable[arrDifference] = i
     }
 
   }
+  return -1;
 }
 
 
